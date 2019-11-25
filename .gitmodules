@@ -1,3 +1,4 @@
 [submodule "RIOT"]
 	path = RIOT
-	url = https://github.com/RIOT-OS/RIOT.git
+	url = git@github.com:seojeongmoon/RIOT.git
+	branch = dtls

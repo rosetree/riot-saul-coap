@@ -41,6 +41,13 @@ USEMODULE += netstats_l2
 CFLAGS += -DGNRC_IPV6_NIB_CONF_SLAAC=1
 
 
+#choose tiny dtls stack 
+#if errors, disable
+USEMODULE += tinydtls_sock_dtls
+CFLAGS += -DDTLS_PSK
+# when using plain CoAP. Uncomment the next line to fix this.
+CFLAGS += -DGCOAP_PDU_BUF_SIZE=256
+
 # Comment this out to disable code in RIOT that does safety checking
 # which is not needed in a production environment but helps in the
 # development process:
