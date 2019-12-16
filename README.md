@@ -76,6 +76,9 @@ interpreted.
 [list of cbor implementations]: http://cbor.io/impls.html
 
 ## Build and Execute
+
+Directory: X/riot-saul-coap/RIOT/examples/gcoap/
+
 Enter shell with board command (Phytec)
 
     SERIAL=... BOARD=pba-d-01-kw2x BUILD_IN_DOCKER=1 make all flash term
@@ -83,3 +86,11 @@ Enter shell with board command (Phytec)
 To distinguish multiple boards using SERIAL number
 
     make list-ttys 
+
+To test get command 
+
+    coap get <ip address> 5683 <resource>
+    
+With DTLS, port number is 5684
+
+

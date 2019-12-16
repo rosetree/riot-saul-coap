@@ -53,4 +53,11 @@ DEVELHELP ?= 1
 # Change this to 0 show compiler invocation lines by default:
 QUIET ?= 1
 
+# Include tinycbor for data representation
+USEPKG += tinycbor
+INCLUDE += $(RIOTPKG)/tinycbor/cbor.h
+
+CFLAGS += -DGNRC_IPV6_NIB_CONF_SLAAC=1
+
+# Include RIOT Base makefile
 include $(RIOTBASE)/Makefile.include
